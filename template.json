@@ -1,0 +1,344 @@
+{
+  "version": "0.<rand10>",
+  "name": "custom.jmx.<app_name>",
+  "type": "JMX",
+  "processTypes": [
+    10,
+    12,
+    13,
+    16,
+    17,
+    18
+  ],
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "configUI": {
+    "displayName": "Tempest-<app_name>"
+  },
+  "ui": {
+    "charts": [
+      {
+        "group": "<app_name> metrics",
+        "title": "ProcessedEvents",
+        "series": [
+          {
+            "key": "metric_ProcessedEvents_<app_name>",
+            "displayname": "ProcessedEvents"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "FatalErrors",
+        "series": [
+          {
+            "key": "metric_FatalErrors_<app_name>",
+            "displayname": "FatalErrors"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "AsyncEventsReceived",
+        "series": [
+          {
+            "key": "metric_AsyncEventsReceived_<app_name>",
+            "displayname": "AsyncEventsReceived"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "SyncEventsReceived",
+        "series": [
+          {
+            "key": "metric_SyncEventsReceived_<app_name>",
+            "displayname": "SyncEventsReceived"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "TotalEventsReceived",
+        "series": [
+          {
+            "key": "metric_TotalEventsReceived_<app_name>",
+            "displayname": "TotalEventsReceived"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "MaxProcessingTime",
+        "series": [
+          {
+            "key": "metric_MaxProcessingTime_<app_name>",
+            "displayname": "MaxProcessingTime"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "MinProcessingTime",
+        "series": [
+          {
+            "key": "metric_MinProcessingTime_<app_name>",
+            "displayname": "MinProcessingTime"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "TotalProcessingTime",
+        "series": [
+          {
+            "key": "metric_TotalProcessingTime_<app_name>",
+            "displayname": "TotalProcessingTime"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "ExecutionErrors",
+        "series": [
+          {
+            "key": "metric_ExecutionErrors_<app_name>",
+            "displayname": "ExecutionErrors"
+          }
+        ]
+      },
+      {
+        "group": "<app_name> metrics",
+        "title": "AverageProcessingTime",
+        "series": [
+          {
+            "key": "metric_AverageProcessingTime_<app_name>",
+            "displayname": "AverageProcessingTime"
+          }
+        ]
+      }
+     
+    ]
+  },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "metric_ProcessedEvents_<app_name>",
+        "unit": "Count",
+        "displayname": "ProcessedEvents_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "ProcessedEvents",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_FatalErrors_<app_name>",
+        "unit": "Count",
+        "displayname": "FatalErrors_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "FatalErrors",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_AsyncEventsReceived_<app_name>",
+        "unit": "Count",
+        "displayname": "AsyncEventsReceived_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "AsyncEventsReceived",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_SyncEventsReceived_<app_name>",
+        "unit": "Count",
+        "displayname": "SyncEventsReceived_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "SyncEventsReceived",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_TotalEventsReceived_<app_name>",
+        "unit": "Count",
+        "displayname": "TotalEventsReceived_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "TotalEventsReceived",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_MaxProcessingTime_<app_name>",
+        "unit": "Count",
+        "displayname": "MaxProcessingTime_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "MaxProcessingTime",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "avg"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_MinProcessingTime_<app_name>",
+        "unit": "Count",
+        "displayname": "MinProcessingTime_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "MinProcessingTime",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "avg"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_TotalProcessingTime_<app_name>",
+        "unit": "Count",
+        "displayname": "TotalProcessingTime_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "TotalProcessingTime",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "avg"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_ExecutionErrors_<app_name>",
+        "unit": "Count",
+        "displayname": "ExecutionErrors_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "ExecutionErrors",
+        "allowAdditionalKeys": true,
+        "calculateDelta": true,
+        "calculateRate": false,
+        "aggregation": "sum"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "metric_AverageProcessingTime_<app_name>",
+        "unit": "Count",
+        "displayname": "AverageProcessingTime_<app_name>",
+        "dimensions": [
+          "rx_pid"
+        ]
+      },
+      "source": {
+        "domain": "<domain>",
+        "keyProperties": {
+          "name": "\"application totals\"",
+          "type": "Application"
+        },
+        "attribute": "AverageProcessingTime",
+        "allowAdditionalKeys": true,
+        "calculateDelta": false,
+        "calculateRate": false,
+        "aggregation": "avg"
+      }
+    }
+  ]
+}
